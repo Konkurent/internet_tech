@@ -1,6 +1,6 @@
 <?php
 define('PATH_TO_LESSON', '/lesson_02');
-$randCount = rand(0, 26);
+$randCount = rand(0, 24);
 for ($i = 2; $i < 6; $i++) {
     if ($i * $i > $randCount) {
         $randCount = $i * $i;
