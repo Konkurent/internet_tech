@@ -8,7 +8,7 @@ if (!empty($_POST)) {
     $result = [];
 
 
-    $path = $_SERVER['DOCUMENT_ROOT'] . '/';
+    $path = $_SERVER['DOCUMENT_ROOT'] . '/lesson_01/';
 
     $dir = [];
 
@@ -40,11 +40,11 @@ if (!empty($_POST)) {
                 continue;
             }
             if ($_POST['name'] == explode('.', $val)[0] || $_POST['name'] == $val) {
-                if (is_file($_SERVER['DOCUMENT_ROOT'] . '/' .$val)) {
+                if (is_file($_SERVER['DOCUMENT_ROOT'] . '/lesson_01/' .$val)) {
                     $result[$key]['NAME'] = $val;
-                    $result[$key]['SRC'] = '/' .$val;
+                    $result[$key]['SRC'] = '/lesson_01/' .$val;
                     if (isset($_POST['text'])) {
-                        $result[$key]['LINE'] = search($_SERVER['DOCUMENT_ROOT'] . '/' .$val, $_POST['text']);
+                        $result[$key]['LINE'] = search($_SERVER['DOCUMENT_ROOT'] . '/lesson_01/' .$val, $_POST['text']);
                     }
                 }
             }
@@ -56,11 +56,11 @@ if (!empty($_POST)) {
                     if ($val == '.' || $val == '..') {
                         continue;
                     }
-                    if (is_file($_SERVER['DOCUMENT_ROOT'] . '/' .$val)) {
+                    if (is_file($_SERVER['DOCUMENT_ROOT'] . '/lesson_01/' .$val)) {
                         $result[$key]['NAME'] = $val;
-                        $result[$key]['SRC'] = '/' .$val;
+                        $result[$key]['SRC'] = '/lesson_01/' .$val;
                         if (isset($_POST['text'])) {
-                            $result[$key]['LINE'] = search($_SERVER['DOCUMENT_ROOT'] . '/' .$val, $_POST['text']);
+                            $result[$key]['LINE'] = search($_SERVER['DOCUMENT_ROOT'] . '/lesson_01/' .$val, $_POST['text']);
                         }
                     }
                 }
@@ -71,11 +71,11 @@ if (!empty($_POST)) {
                         continue;
                     }
                     if (strlen($val) == 3) {
-                        if (is_file($_SERVER['DOCUMENT_ROOT'] . '/' .$val)) {
+                        if (is_file($_SERVER['DOCUMENT_ROOT'] . '/lesson_01/' .$val)) {
                             $result[$key]['NAME'] = $val;
-                            $result[$key]['SRC'] = '/' .$val;
+                            $result[$key]['SRC'] = '/lesson_01/' .$val;
                             if (isset($_POST['text'])) {
-                                $result[$key]['LINE'] = search($_SERVER['DOCUMENT_ROOT'] . '/' .$val, $_POST['text']);
+                                $result[$key]['LINE'] = search($_SERVER['DOCUMENT_ROOT'] . '/lesson_01/' .$val, $_POST['text']);
                             }
                         }
                     }
@@ -84,7 +84,7 @@ if (!empty($_POST)) {
         }
     }
 
-    $dir = $_SERVER['DOCUMENT_ROOT'] . '/';
+    $dir = $_SERVER['DOCUMENT_ROOT'] . '/lesson_01/';
 
     if (empty($result)) {
         $result = false;

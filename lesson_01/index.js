@@ -38,7 +38,7 @@ $(document).ready(function(){
     $('.btn').on('click', (ev) => {
         ev.preventDefault();
         jQuery.ajax({
-            url: '/ajax.php',
+            url: '/lesson_01/ajax.php',
             type: "POST",
             dataType: "html",
             data: jQuery("form").serialize(),
